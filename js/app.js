@@ -51,6 +51,7 @@ document.addEventListener('mousedown', listenToEvent)
   }
 });
 
+
 function drawGrid(gridNumber = 16){
   const container = document.querySelector('#container');
   let totalGridNumber = Math.floor(gridNumber * gridNumber);
@@ -82,3 +83,19 @@ function listenToEvent(){
 for(let g of grid){
   g.addEventListener('mouseover', chooseColor);
 }}
+
+function clearGrid(){
+  const grid = document.querySelectorAll('.grid');
+  for(let g of grid){
+    if(g.style.backgroundColor !== 'white'){
+      g.style.backgroundColor = 'white';
+    }  
+  }
+}
+
+function showGrid(){
+  const grid = document.querySelectorAll('.grid');
+  for(let g of grid){
+    g.classList.toggle('show-grid');
+  }
+}
