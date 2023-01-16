@@ -50,3 +50,15 @@ button{
 .show-grid{
   border: 1px solid lightblue;  
 }
+
+gridLength{
+  margin-top: -20px;
+}
+output{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.chossed{
+  border: 2px solid green;
+}
