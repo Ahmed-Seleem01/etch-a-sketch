@@ -23,6 +23,11 @@ input.addEventListener('change', ()=>{
   drawGrid(input.value);  
 });
 
+const draw = document.querySelector('#draw');
+draw.addEventListener('click', ()=>{
+  choosedColor = color.value;
+})
+
 function drawGrid(gridNumber = 16){
   const container = document.querySelector('#container');
   let totalGridNumber = Math.floor(gridNumber * gridNumber);
