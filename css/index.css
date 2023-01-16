@@ -46,3 +46,7 @@ button{
   justify-content: flex-start;
   align-self: flex-start;
 }
+
+.show-grid{
+  border: 1px solid lightblue;  
+}
