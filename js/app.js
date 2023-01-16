@@ -33,6 +33,11 @@ erase.addEventListener('click', ()=>{
   choosedColor = 'white';
 })
 
+const btn2 = document.querySelector('#clear');
+btn2.addEventListener('click', () => {
+  clearGrid();  
+});
+
 function drawGrid(gridNumber = 16){
   const container = document.querySelector('#container');
   let totalGridNumber = Math.floor(gridNumber * gridNumber);
