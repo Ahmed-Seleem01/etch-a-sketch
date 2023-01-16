@@ -26,3 +26,23 @@ body{
   box-shadow: 5px 5px 20px 3px rgb(230,230,230);
   background-color: white;
 }
+
+button{
+  width: 120px;
+  padding: 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 2px solid ;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#buttons{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: flex-start;
+}
