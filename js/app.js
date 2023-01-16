@@ -19,6 +19,10 @@ for(let button of buttons){
   button.addEventListener('click', chossedBtn)
 }
 
+input.addEventListener('change', ()=>{
+  drawGrid(input.value);  
+});
+
 function drawGrid(gridNumber = 16){
   const container = document.querySelector('#container');
   let totalGridNumber = Math.floor(gridNumber * gridNumber);
