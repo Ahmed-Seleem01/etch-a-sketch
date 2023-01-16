@@ -38,6 +38,11 @@ btn2.addEventListener('click', () => {
   clearGrid();  
 });
 
+const btn3 = document.querySelector('#show-grid');
+btn3.addEventListener('click', () => {
+  showGrid();  
+});
+
 function drawGrid(gridNumber = 16){
   const container = document.querySelector('#container');
   let totalGridNumber = Math.floor(gridNumber * gridNumber);
