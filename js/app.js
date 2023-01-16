@@ -6,6 +6,19 @@ input.addEventListener("input", (event) => {
 });
 
 drawGrid();
+
+let choosedColor = 'black';
+const color = document.querySelector('#choose-color');
+color.addEventListener('change', (e)=>{
+  choosedColor = color.value;
+  chossedBtn(e);
+});
+
+const buttons = document.querySelectorAll('.edit');
+for(let button of buttons){
+  button.addEventListener('click', chossedBtn)
+}
+
 function drawGrid(gridNumber = 16){
   const container = document.querySelector('#container');
   let totalGridNumber = Math.floor(gridNumber * gridNumber);
@@ -16,5 +29,18 @@ function drawGrid(gridNumber = 16){
     div.classList.add('grid');
     div.setAttribute('style', `width: ${100/gridNumber}%; height: ${100/gridNumber}%;`)
     container.appendChild(div);
+  }
+}
+
+function chooseColor() {
+  this.style.backgroundColor = choosedColor;
+}
+
+function chossedBtn (e){
+  e.target.classList.add('chossed');
+  for(let button of buttons){
+    if(button !== e.target){
+      button.classList.remove('chossed');
+    }
   }
 }
