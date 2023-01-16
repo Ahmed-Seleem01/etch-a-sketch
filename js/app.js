@@ -28,6 +28,11 @@ draw.addEventListener('click', ()=>{
   choosedColor = color.value;
 })
 
+const erase = document.querySelector('#erase');
+erase.addEventListener('click', ()=>{
+  choosedColor = 'white';
+})
+
 function drawGrid(gridNumber = 16){
   const container = document.querySelector('#container');
   let totalGridNumber = Math.floor(gridNumber * gridNumber);
