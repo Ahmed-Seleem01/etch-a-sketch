@@ -43,6 +43,14 @@ btn3.addEventListener('click', () => {
   showGrid();  
 });
 
+document.addEventListener('mousedown', listenToEvent)
+  document.addEventListener('mouseup',() =>{
+  const grid = document.querySelectorAll('.grid');
+  for(let g of grid){
+    g.removeEventListener('mouseover', chooseColor);
+  }
+});
+
 function drawGrid(gridNumber = 16){
   const container = document.querySelector('#container');
   let totalGridNumber = Math.floor(gridNumber * gridNumber);
@@ -68,3 +76,9 @@ function chossedBtn (e){
     }
   }
 }
+
+function listenToEvent(){
+  const grid = document.querySelectorAll('.grid');
+for(let g of grid){
+  g.addEventListener('mouseover', chooseColor);
+}}
